@@ -10,6 +10,9 @@ export default {
         primary: '#0096FF',
         secondary:'#265587'
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%)',
+      },
     },
   },
   plugins: [],

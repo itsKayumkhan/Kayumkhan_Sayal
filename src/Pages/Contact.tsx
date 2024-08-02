@@ -1,11 +1,11 @@
-import React from "react";
 import ContainerWrapper from "../components/ContainerWrapper";
+import Hading from "../components/Hading";
 
 const Contact = () => {
   return (
     <ContainerWrapper>
-      <div className="w-[70%]  bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact Form</h2>
+      <div className=" cardS w-[70%]  bg-white rounded-lg shadow-md p-6">
+       <Hading text="Contact Me" isBlack={true}/>
         <form className="flex flex-col">
           <input
             type="text"
