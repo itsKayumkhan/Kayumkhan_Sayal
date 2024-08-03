@@ -5,35 +5,28 @@ import SideNav from "../components/SideNav";
 import Terminal from "../components/Terminal";
 import gsap from "gsap";
 
-const Home = ({
-  buttonRef,
-  hadingRef,
-  desRef,
-}: {
+interface HomeProps {
   buttonRef: React.RefObject<HTMLDivElement>;
-  hadingRef: React.RefObject<HTMLHeadingElement>;
+  headingRef: React.RefObject<HTMLHeadingElement>;
   desRef: React.RefObject<HTMLHeadingElement>;
-}) => {
+}
 
-  useEffect(()=>{
+const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
+  useEffect(() => {
     gsap.from(".logoImg", {
       opacity: 0,
-      // y: 00,
-      // ease: "power2",
-      duration: 1
-    })
-  })
-
-
+      duration: 1,
+    });
+  }, []);
 
   return (
     <>
-      <main className=" h-[90vh] ms-36 relative  top-20">
+      <main className="h-[90vh] ms-36 relative top-20">
         <div className="w-10 absolute right-72 -top-24 shadow-white-xl">
           <Terminal />
         </div>
-        <div className="flex flex-col  items-start gap-2 z-10 top-2">
-          <h1 className="text-7xl font-bold z-10 shadow-white" ref={hadingRef}>
+        <div className="flex flex-col items-start gap-2 z-10 top-2">
+          <h1 className="text-7xl font-bold z-10 shadow-white" ref={headingRef}>
             Kayumkhan_Sayal
           </h1>
           <h2 className="text-3xl mt-4" ref={desRef}>
@@ -48,8 +41,8 @@ const Home = ({
           </div>
         </div>
 
-        <div className="absolute top-[30%] right-2"  >
-          <SideNav/>
+        <div className="absolute top-[30%] right-2">
+          <SideNav />
         </div>
 
         <div className="img absolute -top-32 left-[30%] -z-1">

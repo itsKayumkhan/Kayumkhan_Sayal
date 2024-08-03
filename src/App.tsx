@@ -8,37 +8,33 @@ import Footer from "./components/Footer";
 import Service from "./Pages/Service";
 import Contact from "./Pages/Contact";
 
-import { useGSAP } from "@gsap/react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { useRef } from "react";
-gsap.registerPlugin(useGSAP);
+import { textAnimation, navAnimation } from "./animation/animation.js";
 
-import {
-  textAnimation,
-  navAnimation,
-} from "./animation/animation.js";
+gsap.registerPlugin();
+
 function App() {
   const logoRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLDivElement>(null);
-  const hadingRef = useRef<HTMLHeadingElement>(null);
-  const desRef = useRef<HTMLHeadingElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const desRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
+  useLayoutEffect(() => {
     const t1 = gsap.timeline();
-    t1.from(logoRef.current,navAnimation);
+    t1.from(logoRef.current, navAnimation);
     t1.from(iconRef.current, navAnimation);
-
-    t1.from(hadingRef.current, textAnimation);
+    t1.from(headingRef.current, textAnimation);
     t1.from(desRef.current, textAnimation);
     t1.from(buttonRef.current, textAnimation);
+  }, []);
 
-  });
   return (
     <>
       <div className="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
       <NavBar logoRef={logoRef} iconRef={iconRef} />
-      <Home buttonRef={buttonRef} hadingRef={hadingRef} desRef={desRef}/>
+      <Home buttonRef={buttonRef} headingRef={headingRef} desRef={desRef} />
       <About />
       <ProjectCard />
       <Service />
