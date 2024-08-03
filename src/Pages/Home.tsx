@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import gLogo from "../../public/assets/gLogo.svg";
 import Button from "../components/Button";
 import SideNav from "../components/SideNav";
-import Terminal from "../components/terminal";
+import Terminal from "../components/Terminal";
 import gsap from "gsap";
 
 const Home = ({
