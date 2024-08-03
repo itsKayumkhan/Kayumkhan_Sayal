@@ -7,14 +7,38 @@ import ProjectCard from "./Pages/ProjectCard";
 import Footer from "./components/Footer";
 import Service from "./Pages/Service";
 import Contact from "./Pages/Contact";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+gsap.registerPlugin(useGSAP);
+
+import {
+  textAnimation,
+  navAnimation,
+} from "./animation/animation.js";
 function App() {
+  const logoRef = useRef<HTMLDivElement>(null);
+  const iconRef = useRef<HTMLDivElement>(null);
+  const hadingRef = useRef<HTMLHeadingElement>(null);
+  const desRef = useRef<HTMLHeadingElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const t1 = gsap.timeline();
+    t1.from(logoRef.current,navAnimation);
+    t1.from(iconRef.current, navAnimation);
+
+    t1.from(hadingRef.current, textAnimation);
+    t1.from(desRef.current, textAnimation);
+    t1.from(buttonRef.current, textAnimation);
+
+  });
   return (
     <>
-     
-     
       <div className="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
-      <NavBar />
-      <Home />
+      <NavBar logoRef={logoRef} iconRef={iconRef} />
+      <Home buttonRef={buttonRef} hadingRef={hadingRef} desRef={desRef}/>
       <About />
       <ProjectCard />
       <Service />

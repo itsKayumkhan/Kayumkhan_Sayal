@@ -2,6 +2,9 @@ import { icon } from "../../public/assets/svg/icon.jsx";
 import ContainerWrapper from "../components/ContainerWrapper.js";
 import Hading from "../components/Hading.js";
 const About = () => {
+
+
+
   return (
     <ContainerWrapper>
       <>
@@ -27,9 +30,12 @@ const About = () => {
         <div>
           <Hading text="Tools I use" isBlack={true}/>
 
-          <div className="flex space-x-2 justify-center items-center  w-full bg-slate-200">
-            {icon?.map((i) => (
-              <span className="h-full w-full mx-6 p-4">{i}</span>
+          <div className="flex space-x-20 justify-center items-center  w-full bg-slate-200 ">
+            {icon?.map((i,ind) => (
+              <span key={`${ind}About`} className="h-full w-full mx-6 p-4 svgLogo">{i}</span>
+            ))}
+            {icon?.map((i,ind) => (
+              <span key={`${ind}About`} className="h-full w-full mx-6 p-4 svgLogo">{i}</span>
             ))}
           </div>
         </div>

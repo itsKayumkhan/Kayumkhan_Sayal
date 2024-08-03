@@ -11,8 +11,8 @@ const ProjectCard = () => {
         <Hading text="Project's" />
         <div className="flex">
           {
-            projectObj?.map(card=>{
-              return <Card title={card.title} href={card.link} tag={[...card.tags] } img={card.img}/>
+            projectObj?.map((card,i)=>{
+              return <Card key={`${i}Project`} title={card.title} href={card.link} tag={[...card.tags] } img={card.img}/>
             })
           }
         </div>
