@@ -1,6 +1,6 @@
 import ContainerWrapper from "../components/ContainerWrapper.js";
 import Hading from "../components/Hading.js";
-import { icon} from "../components/icon.jsx";
+import { icon} from "../../public/assets/svg/icon.js";
 const About = () => {
 
 

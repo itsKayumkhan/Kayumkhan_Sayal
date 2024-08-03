@@ -10,7 +10,7 @@ import Contact from "./Pages/Contact";
 
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { textAnimation, navAnimation } from "./animation/animation.js";
+import { textAnimation, navAnimation } from "./animation/animation.ts";
 
 gsap.registerPlugin();
 

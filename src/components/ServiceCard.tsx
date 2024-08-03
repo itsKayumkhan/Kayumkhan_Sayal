@@ -1,10 +1,8 @@
 
 const ServiceCard = ({
-  icon,
   title,
   description,
 }: {
-  icon: string;
   title: string;
   description: string;
 }) => {
