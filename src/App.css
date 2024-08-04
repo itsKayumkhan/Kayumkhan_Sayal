@@ -549,3 +549,51 @@ body {
     transform:translateX(calc(-250px * 12))
   }
 }
+/* From Uiverse.io by bhaveshxrawat */ 
+.cardT {
+  width: 190px;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.cardT h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+.cardT::before {
+  content: '';
+  position: absolute;
+  width: 100% ;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cardT::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  inset: 5px;
+  border-radius: 15px;
+}  
+/* .cardT:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */

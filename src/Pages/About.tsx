@@ -30,12 +30,12 @@ const About = () => {
         <div>
           <Hading text="Tools I use" isBlack={true}/>
 
-          <div className="flex space-x-20 justify-center items-center  w-full bg-slate-200 ">
+          <div className="flex space-x-20 justify-center items-center  w-full bg-slate-200 cardT -z-10">
             {icon?.map((i:any,ind:number) => (
-              <span key={`${ind}About`} className="h-full w-full mx-6 p-4 svgLogo">{i}</span>
+              <span key={`${ind}About`} className="h-full w-full mx-6 p-4 svgLogo z-10">{i}</span>
             ))}
             {icon?.map((i:any,ind:number) => (
-              <span key={`${ind}About`} className="h-full w-full mx-6 p-4 svgLogo">{i}</span>
+              <span key={`${ind}About`} className="h-full w-full mx-6 p-4 svgLogo z-10">{i}</span>
             ))}
           </div>
         </div>

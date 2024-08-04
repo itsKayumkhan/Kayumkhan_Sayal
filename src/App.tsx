@@ -12,8 +12,8 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { textAnimation, navAnimation } from "./animation/animation.ts";
 
-gsap.registerPlugin();
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 function App() {
   const logoRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLDivElement>(null);

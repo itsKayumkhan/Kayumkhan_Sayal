@@ -13,11 +13,14 @@ const Card = ({
   img: string;
   key: string;
 }) => {
+
+
+
   return (
     <a
     key={key}
       href={href}
-      className=" flex justify-center items-center h-[100vh] min-w-full relative flex-col"
+      className=" scrollProject flex justify-center items-center h-[100vh] min-w-full relative flex-col"
     >
       <div className="container perspective-1000 relative w-[70%] h-[80%]  rounded-lg">
         <a href="#" className="link-1 " />
@@ -36,7 +39,7 @@ const Card = ({
             />
           </div>
         </div>
-        <div className="flex items-center justify-center gap-3  absolute bottom-10 left-3 ">
+        <div className="flex flex-col items-center justify-center gap-3  absolute top-0 -left-32 ">
           {tag.map((text) => (
             <Tag text={text} key={`${text}Card`}/>
           ))}
