@@ -429,25 +429,25 @@ body {
 .link-1:focus ~ .card {
   transform: rotateX(10deg) rotateY(-10deg) translateZ(0);
   transform-origin: right bottom;
-  box-shadow: 10px 20px black;
+  box-shadow: 10px 20px white;
 }
 .link-2:hover ~ .card,
 .link-2:focus ~ .card {
   transform: rotateX(10deg) rotateY(10deg) translateZ(0);
   transform-origin: left bottom;
-  box-shadow: -10px 20px black;
+  box-shadow: -10px 20px white;
 }
 .link-3:hover ~ .card,
 .link-3:focus ~ .card {
   transform: rotateX(-10deg) rotateY(10deg) translateZ(0);
   transform-origin: left top;
-  box-shadow: -10px -20px black;
+  box-shadow: -10px -20px white;
 }
 .link-4:hover ~ .card,
 .link-4:focus ~ .card {
   transform: rotateX(-10deg) rotateY(-10deg) translateZ(0);
   transform-origin: right top;
-  box-shadow: 10px -20px black;
+  box-shadow: 10px -20px white;
 }
 
 .container a:hover ~ .card .card-header,

@@ -20,7 +20,7 @@ const Card = ({
     <a
     key={key}
       href={href}
-      className=" scrollProject flex justify-center items-center h-[100vh] min-w-full relative flex-col"
+      className=" scrollProject flex justify-center items-center h-[100vh] min-w-[90%] relative flex-col"
     >
       <div className="container perspective-1000 relative w-[70%] h-[80%]  rounded-lg">
         <a href="#" className="link-1 " />

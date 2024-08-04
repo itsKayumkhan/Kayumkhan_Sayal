@@ -1,4 +1,3 @@
-
 const ServiceCard = ({
   title,
   description,
@@ -7,10 +6,9 @@ const ServiceCard = ({
   description: string;
 }) => {
   return (
- 
-     <div className="flex justify-center items-center h-[80vh] relative flex-col overflow-x-auto">
-      <div className="cardS w-[40%]">
-        <p className="heading">{description}</p>
+    <div className="flex justify-center items-center h-[80vh] relative flex-col overflow-x-auto">
+      <div className="cardS w-[60%]">
+        <p className="heading text-3xl">{description}</p>
 
         <p> {title}</p>
       </div>

@@ -12,6 +12,7 @@ const Corousel = ({data}:{data:Array<any>}) => {
         showArrows={true}
         interval={2000}
         showThumbs={false}
+        stopOnHover={false}
       >
       {data}
       </Carousel>
