@@ -1,5 +1,5 @@
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import ContainerWrapper from "../components/ContainerWrapper";
 import Corousel from "../components/Corousel.tsx";
 import Hading from "../components/Hading.tsx";
