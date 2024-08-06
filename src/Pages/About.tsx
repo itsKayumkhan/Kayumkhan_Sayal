@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+import { icon } from "../../public/assets/svg/icon.js";
 import ContainerWrapper from "../components/ContainerWrapper.js";
 import Hading from "../components/Hading.js";
-import { icon } from "../../public/assets/svg/icon.js";
 
 gsap.registerPlugin(ScrollTrigger);
 

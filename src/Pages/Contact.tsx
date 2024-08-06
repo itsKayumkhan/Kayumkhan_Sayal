@@ -1,8 +1,7 @@
-import { useEffect } from "react";
-import ContainerWrapper from "../components/ContainerWrapper";
-import Hading from "../components/Hading";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
+import ContainerWrapper from "../components/ContainerWrapper";
 gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
   useEffect(() => {

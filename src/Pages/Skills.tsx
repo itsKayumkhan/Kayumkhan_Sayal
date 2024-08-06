@@ -1,8 +1,7 @@
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Hading from "../components/Hading";
-import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
