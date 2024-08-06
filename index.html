@@ -1,15 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/public/assets/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kayumkhan_Sayal</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.9/dist/lenis.css"
+    />
   </head>
   <body>
-    <div id="root" class=" text-white">
-      
-    </div>
+    <div id="root" class="text-white"></div>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script>
+      const lenis = new Lenis();
+
+     
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

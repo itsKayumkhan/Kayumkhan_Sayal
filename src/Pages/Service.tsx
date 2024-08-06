@@ -18,7 +18,6 @@ const Service = () => {
           start: "top bottom",
           end: "top top",
           scrub: true,
-          markers: true,
         },
         duration: 0.5
       })

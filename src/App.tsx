@@ -13,6 +13,7 @@ import gsap from "gsap";
 import { textAnimation, navAnimation } from "./animation/animation.ts";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Skills from "./Pages/Skills.tsx";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const logoRef = useRef<HTMLDivElement>(null);
@@ -36,6 +37,7 @@ function App() {
       <NavBar logoRef={logoRef} iconRef={iconRef} />
       <Home buttonRef={buttonRef} headingRef={headingRef} desRef={desRef} />
       <About />
+      <Skills/>
       <ProjectCard />
       <Service />
       <Contact />
