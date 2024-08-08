@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import gLogo from "../../public/assets/gLogo.svg";
+import gLogo from "../../public/gLogo.svg";
 import Button from "../components/Button";
 import SideNav from "../components/SideNav";
 import Terminal from "../components/Terminal";
@@ -21,8 +21,8 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
 
   return (
     <>
-      <main className="h-[90vh] ms-36 relative top-20">
-        <div className="w-10 absolute right-72 -top-24 shadow-white-xl">
+      <main className="h-[90vh] ms-36 relative top-20 " id="Home">
+        <div className="w-10 absolute right-72 -top-24 shadow-white-xl -z-10">
           <Terminal />
         </div>
         <div className="flex flex-col items-start gap-2 z-10 top-2">
@@ -35,7 +35,7 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
           <div ref={buttonRef}>
             <Button
               text="Resume"
-              href="../../public/assets/kayumkhanResume.pdf"
+              href="../../public/kayumkhanResume.pdf"
               isDownload={true}
             />
           </div>

@@ -14,13 +14,13 @@ const SideNav = () => {
   })
   return (
     <>
-      <nav className="">
+      <nav className="z-10">
         <ul className='flex flex-col items-center justify-center gap-2 text-3xl'>
-            <li  className='text-3xl flex items-center justify-center icon cursor-pointer  hover:bg-[#0a66c2]  hover:scale-125  w-12 h-12 list'><i className="ri-linkedin-fill"></i></li>
-            <li  className='text-3xl flex items-center justify-center icon cursor-pointer  hover:bg-[#1da1f2]  hover:scale-125  w-12 h-12 list'><i className="ri-twitter-fill"></i></li>
-            <li  className='text-3xl flex items-center justify-center icon cursor-pointer  hover:bg-[#c32aa3]  hover:scale-125  w-12 h-12 list'><i className="ri-instagram-line"></i></li>
-            <li  className='text-3xl flex items-center justify-center icon cursor-pointer  hover:bg-[#1877f2]  hover:scale-125  w-12 h-12 list '><i className="ri-facebook-fill"></i></li>
-            <li  className='text-3xl flex items-center justify-center icon cursor-pointer  hover:bg-[#5865f2]  hover:scale-125  w-12 h-12 list'><i className="ri-discord-fill"></i></li>
+            <li  className='text-3xl flex items-center justify-center icon cursor-pointer   hover:scale-125  w-12 h-12 list z-10'><a target="_blank" href="https://www.linkedin.com/in/kayumkhan-sayal-4aa583264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="hover:scale-90 duration-300 text-slate-300 hover:text-white ri-linkedin-fill"></i></a></li>
+            <li  className='text-3xl flex items-center justify-center icon cursor-pointer   hover:scale-125  w-12 h-12 list z-10'><a target="_blank" href="https://github.com/itsKayumkhan"><i className="hover:scale-90 duration-300 text-slate-300 hover:text-white ri-github-fill"></i></a></li>
+            <li  className='text-3xl flex items-center justify-center icon cursor-pointer   hover:scale-125  w-12 h-12 list z-10'><a target="_blank" href="https://www.twitter.com/kayumkhankks"><i className="hover:scale-90 duration-300 text-slate-300 hover:text-white ri-twitter-fill"></i></a></li>
+            <li  className='text-3xl flex items-center justify-center icon cursor-pointer   hover:scale-125  w-12 h-12 list z-10'><a target="_blank" href="https://www.instagram.com/codemanoranjan"><i className="hover:scale-90 duration-300 text-slate-300 hover:text-white ri-instagram-line"></i></a></li>
+            <li  className='text-3xl flex items-center justify-center icon cursor-pointer   hover:scale-125  w-12 h-12 list z-10'><a target="_blank" href="https://www.facebook.com/kayumkhankks"><i className="hover:scale-90 duration-300 text-slate-300 hover:text-white ri-facebook-fill"></i></a></li>
         </ul>
       </nav>
     </>
