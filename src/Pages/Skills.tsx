@@ -61,8 +61,8 @@ const Skills = () => {
       scrollTrigger: {
         trigger: ".skill",
         scroller: "body",
-        start: "top 80%",
-        end: "top center",
+        start: "top 90%",
+        end: "top 20%",
         scrub: true,
       },
       duration: 0.5,

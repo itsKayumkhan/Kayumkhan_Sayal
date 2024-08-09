@@ -32,8 +32,8 @@ const ProjectCard = () => {
         scrollTrigger: {
           trigger: ".projects",
           scroller:"body",
-          start: "top bottom",
-          end: "top top",
+          start: "top 90%",
+          end: "top 20%",
           scrub: true,
         },
         duration: 0.5

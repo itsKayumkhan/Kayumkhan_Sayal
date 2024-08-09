@@ -1,9 +1,8 @@
+import gsap from "gsap";
 import { useEffect } from "react";
 import gLogo from "../../public/gLogo.svg";
 import Button from "../components/Button";
 import SideNav from "../components/SideNav";
-import Terminal from "../components/Terminal";
-import gsap from "gsap";
 
 interface HomeProps {
   buttonRef: React.RefObject<HTMLDivElement>;
@@ -21,12 +20,12 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
 
   return (
     <>
-      <main className="h-[90vh] ms-36 relative top-20 " id="Home">
-        <div className="w-10 absolute right-72 -top-24 shadow-white-xl -z-10">
+      <main className="h-[90vh] ms-12 lg:ms-36 relative top-20 " id="Home">
+        {/* <div className="w-10 absolute right-72 -top-24 shadow-white-xl -z-10">
           <Terminal />
-        </div>
+        </div> */}
         <div className="flex flex-col items-start gap-2 z-10 top-2">
-          <h1 className="text-7xl font-bold z-10 shadow-white" ref={headingRef}>
+          <h1 className="text-4xl lg:text-7xl font-bold z-10 shadow-white" ref={headingRef}>
             Kayumkhan_Sayal
           </h1>
           <h2 className="text-3xl mt-4" ref={desRef}>
@@ -48,7 +47,7 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
         <div className="img absolute -top-32 left-[30%] -z-1">
           <img src={gLogo} alt="gLogo" className="-z-1 logoImg" />
         </div>
-        <div id="scroll-wrapper">
+        <div id="scroll-wrapper" className="">
           <div id="scroll-wrapper-inner">
             <div id="scroll-title">Scroll</div>
             <div id="scroll-down"></div>

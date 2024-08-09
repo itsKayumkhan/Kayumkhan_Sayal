@@ -27,7 +27,7 @@ const Card = ({
         <a href="#" className="link-2 " />
         <a href="#" className="link-3 " />
         <a href="#" className="link-4 " />
-        <div className=" cardS card bg-white rounded-lg border border-black relative transition-all duration-300 ease-out transform origin-center w-full  shadow-none">
+        <div className=" card bg-white rounded-lg border border-black relative transition-all duration-300 ease-out transform origin-center w-full  shadow-none">
           <div className="card-header p-2 bg-black text-white text-lg border border-white rounded-t-lg">
             {title}
           </div>

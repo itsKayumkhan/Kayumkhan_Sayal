@@ -9,12 +9,12 @@ const Footer = () => {
             <img src='../../public/logo.svg' className='h-full object-cover w-full hover:scale-95 duration-100'
             />
         </div>
-        <div className='flex items-center justify-center gap-3'>
-            <h2 className='font-bold text-1xl'>Twitter</h2>
-            <h2 className='font-bold text-1xl'>Linkedin</h2>
-            <h2 className='font-bold text-1xl'>Github</h2>
-            <h2 className='font-bold text-1xl'>Instagram</h2>
-            <h2 className='font-bold text-1xl'>Facebook</h2>
+        <div className='flex items-center justify-center gap-4'>
+            <a href="https://twitter.com/kayumkhan"><h2 className='font-bold text-2xl'>Twitter</h2></a>
+            <a href="https://www.linkedin.com/in/kayumkhan"><h2 className='font-bold text-2xl'>Linkedin</h2></a>
+            <a href="https://github.com/itsKayumkhan"><h2 className='font-bold text-2xl'>Github</h2></a>
+            <a href="https://www.instagram.com/condemanoranjan"><h2 className='font-bold text-2xl'>Instagram</h2></a>
+            <a href="https://www.facebook.com/kayumkhan_kks"><h2 className='font-bold text-2xl'>Facebook</h2></a>
         </div>
         
         <div className='flex items-center justify-center gap-3'>

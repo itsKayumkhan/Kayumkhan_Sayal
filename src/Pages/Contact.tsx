@@ -1,33 +1,94 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ContainerWrapper from "../components/ContainerWrapper";
 import Hading from "../components/Hading";
+import toast from "react-hot-toast";
 gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
   const hadingRef = useRef<HTMLDivElement>(null);
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e:any) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const onSubmit = async(event:any) => {
+    event.preventDefault();
+    const { name, email, message } = formData;
+
+    if (!name || !email || !message) {
+      toast.error('Please fill in all fields');
+      return
+    } else {
+      // Handle form submission (e.g., send data to a server)
+
+      // Clear the form after submission
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "7feb66f4-3677-4bc1-b964-26cca454ebe1");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+      }
+
+      toast.success('Form submitted successfully');
+    }
+  };
+
+
+
+
   useEffect(() => {
-    gsap.from(".contact", {
+    const animation = gsap.from(".contact", {
       x: 500,
       opacity: 0,
       zIndex: -1,
       scrollTrigger: {
-        trigger: ".skill",
+        trigger: ".contact",
         scroller: "body",
-        start: "top 80%",
-        end: "top center",
+        start: "top 90%",
+        end: "top 20%",
         scrub: true,
       },
       duration: 0.5,
     });
-  });
+  
+    return () => {
+      animation.kill();
+    };
+  }, []);
+  
 
+  
+  
   return (
     <ContainerWrapper>
       <>
         {" "}
-        <div className=" z-10" ref={hadingRef}>
+        <div className=" contact z-10" ref={hadingRef}>
           <Hading text="Contact " refs={hadingRef} />
         </div>
         <section
@@ -46,24 +107,33 @@ const Contact = () => {
                   <h2 className="text-slate-300 font-manrope text-4xl font-semibold leading-10 mb-9 lg:text-left text-center">
                     Any message for me
                   </h2>
-                  <form>
+                  <form onSubmit={(e)=>onSubmit(e)}>
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={(e)=>handleChange(e)}
                       className=" w-full  h-14 shadow-xl focus:shadow-sm duration-150 focus:border-blue-600  ease-in text-slate-900 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-1 px-4 mb-4"
                       placeholder="Name"
                     />
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={(e)=>handleChange(e)}
                       className="w-full  h-14 shadow-xl focus:shadow-sm  duration-150 focus:border-blue-600  ease-in text-slate-900 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-1 px-4 mb-4"
                       placeholder="Email"
                     />
                     <textarea
                       id="text"
+                      name="message"
+                      value={formData.message}
+                      onChange={(e)=>handleChange(e)}
                       className="w-full  h-48 shadow-xl focus:shadow-sm duration-150 focus:border-blue-600  ease-in resize-none text-slate-900 placeholder-text-400 text-lg font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none px-4 py-4 mb-4"
                       placeholder="type your message"
                       defaultValue={""}
                     />
-                    <button className="w-full  h-12 text-center text-white text-base font-semibold leading-6 rounded-full bg-slate-900 shadow transition-all duration-700 hover:bg-slate-700">
+                    <button type="submit" className="w-full  h-12 text-center text-white text-base font-semibold leading-6 rounded-full bg-slate-900 shadow transition-all duration-700 hover:bg-slate-700">
                       Submit
                     </button>
                   </form>
