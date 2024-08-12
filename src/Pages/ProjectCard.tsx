@@ -1,20 +1,18 @@
-
 import { useEffect, useRef } from "react";
 import ContainerWrapper from "../components/ContainerWrapper";
-import Corousel from "../components/Corousel.tsx";
-import Hading from "../components/Hading.tsx";
-import { projectObj } from "../../Constants.ts";
-import Card from "../components/Card.tsx";
+import Corousel from "../components/Corousel";
+import Hading from "../components/Hading";
+import { projectObj } from "../../Constants";
+import Card from "../components/Card";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const ProjectCard = () => {
+  const hadingRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
 
-
-  const hadingRef = useRef<HTMLDivElement>(null)
-
-  const data = projectObj?.map((card, i) => (
+  const data = projectObj.map((card, i) => (
     <Card
       key={`${i}Project`}
       title={card.title}
@@ -22,24 +20,26 @@ const ProjectCard = () => {
       tag={[...card.tags]}
       img={card.img}
     />
-  ))
+  ));
 
   useEffect(() => {
-    gsap.from('.projects', {
-      x:500,
+    if (projectRef.current) {
+      gsap.from(projectRef.current, {
+        x: 500,
         opacity: 0,
         zIndex: -1,
         scrollTrigger: {
-          trigger: ".projects",
-          scroller:"body",
+          trigger: projectRef.current,
+          scroller: "body",
           start: "top 90%",
           end: "top 20%",
           scrub: true,
         },
-        duration: 0.5
-      })
-  })
- 
+        duration: 0.5,
+      });
+    }
+  }, [projectRef]); // Include projectRef as a dependency
+
   return (
     <ContainerWrapper>
       <>
@@ -47,9 +47,11 @@ const ProjectCard = () => {
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         </div>
 
-       <div className="projects my-12" > <Hading text="Project's" refs={hadingRef}/></div>
+        <div className="projects my-12" ref={projectRef}>
+          <Hading text="Projects" refs={hadingRef} />
+        </div>
         <div className="flex">
-          <Corousel data={data}/>
+          <Corousel data={data} />
         </div>
       </>
     </ContainerWrapper>
