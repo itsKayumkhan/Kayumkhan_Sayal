@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { useEffect } from "react";
-import gLogo from "../../public/gLogo.svg";
+import gLogo from "../../gLogo.svg";
 import Button from "../components/Button";
 import SideNav from "../components/SideNav";
 

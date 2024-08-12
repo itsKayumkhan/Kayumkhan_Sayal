@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import Logo from "../../public/logo.svg";
+import Logo from "../../logo.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
