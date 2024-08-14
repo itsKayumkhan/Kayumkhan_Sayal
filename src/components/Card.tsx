@@ -33,7 +33,7 @@ const Card = ({
           </div>
           <div className="w-full h-full flex items-center justify-center rounded-lg">
             <img
-              src={`../../project/${img}.png`}
+              src={img}
               alt={img}
               className="w-full h-full object-contain rounded-b-lg "
             />

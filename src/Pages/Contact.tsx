@@ -29,9 +29,7 @@ const Contact = () => {
       toast.error('Please fill in all fields');
       return
     } else {
-      // Handle form submission (e.g., send data to a server)
-
-      // Clear the form after submission
+   
       setFormData({
         name: '',
         email: '',

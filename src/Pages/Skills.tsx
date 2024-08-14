@@ -17,7 +17,7 @@ const Skills = () => {
     "React",
     "NextJs",
     "npm",
-
+    "photo editing",
     "tailwindCss",
     "MongoDb",
     "Sql",
