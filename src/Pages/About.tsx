@@ -57,8 +57,8 @@ const About = () => {
 
   return (
     <ContainerWrapper>
-      <div id="About" ref={aboutRef} className="w-full  lg:h-screen ">
-        <div className="lg:h-[20%]  about w-full">
+      <div id="About" ref={aboutRef} className="w-full  h-[120vh] ">
+        <div className="lg:h-[20%]  about w-full my-24">
           {" "}
           <Hading
             text="About"

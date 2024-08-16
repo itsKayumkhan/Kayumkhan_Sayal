@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Hading from "../components/Hading";
 import { useRef } from "react";
+import ContainerWrapper from "../components/ContainerWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,17 +73,17 @@ const Skills = () => {
   return (
     <>
       <div
-        className="main flex items-center justify-center h-screen z-10 flex-col"
+        className="main flex items-center justify-center  z-10 flex-col h-[130vh] "
         id="Skills"
       >
-        <div className="skill my-12 -z-100 " ref={hadingRef}>
+        <div className="h-[20%] skill my-12 -z-100 " ref={hadingRef}>
          
           <Hading text="Skills" refs={hadingRef}/>
         </div>
-        <div className="w-[80%] flex items-center justify-center flex-wrap skills gap-4 ">
+        <div className="w-[80%] flex items-end justify-center flex-wrap skills gap-4 ">
           {icon.map((item, index) => (
             <h1
-              className="iconSkill z-10  border-white border-[2px] rounded-full py-4 px-4 text-3xl blur-xl opacity-0"
+              className="iconSkill z-10  border-white border-[2px] rounded-full lg:py-4 lg:px-4 px-2 py-1 lg:text-3xl blur-xl opacity-0"
               id={item}
               key={index}
             >

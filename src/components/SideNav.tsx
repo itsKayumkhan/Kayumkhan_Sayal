@@ -19,7 +19,7 @@ const SideNav = () => {
       <ul className="flex flex-col items-center justify-center gap-2 text-3xl">
         <li
           ref={(el) => listRefs.current[0] = el}
-          className="text-3xl flex items-center justify-center icon cursor-pointer hover:scale-125 w-12 h-12 list z-10"
+          className="text-3xl flex items-center justify-center icon cursor-pointer hover:scale-125 lg:w-12 lg:h-12 w-6 h-6 list z-10"
         >
           <a
             target="_blank"

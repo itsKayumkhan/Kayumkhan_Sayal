@@ -28,10 +28,10 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
           <h1 className="text-4xl lg:text-7xl font-bold z-10 shadow-white" ref={headingRef}>
             Kayumkhan_Sayal
           </h1>
-          <h2 className="text-3xl mt-4" ref={desRef}>
+          <h2 className="text-2xl mt-4" ref={desRef}>
             Full Stack Developer
           </h2>
-          <div ref={buttonRef}>
+          <div ref={buttonRef} >
             <Button
               text="Resume"
               href="../../public/kayumkhanResume.pdf"
@@ -44,7 +44,7 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
           <SideNav />
         </div>
 
-        <div className="img absolute -top-32 left-[30%] -z-1">
+        <div className="hidden md:block img absolute -top-32 left-[30%] -z-1">
           <img src={gLogo} alt="gLogo" className="-z-1 logoImg" />
         </div>
         <div id="scroll-wrapper" className="">

@@ -20,9 +20,9 @@ const Card = ({
     <a
     key={key}
       href={href}
-      className=" scrollProject flex justify-center items-center h-[100vh] min-w-[90%] relative flex-col"
+      className=" scrollProject flex justify-center items-center h-[100vh] min-w-[80%] relative flex-col"
     >
-      <div className="container perspective-1000 relative w-[70%] h-[80%]  rounded-lg">
+      <div className="container perspective-1000 relative lg:w-[70%] lg:h-[80%] w-full h-full rounded-lg">
         <a href="#" className="link-1 " />
         <a href="#" className="link-2 " />
         <a href="#" className="link-3 " />
@@ -31,7 +31,7 @@ const Card = ({
           <div className="card-header p-2 bg-black text-white text-lg border border-white rounded-t-lg">
             {title}
           </div>
-          <div className="w-full h-full flex items-center justify-center rounded-lg">
+          <div className="w-1/3 h-1/3 lg:w-full lg:h-full flex items-center justify-center rounded-lg">
             <img
               src={img}
               alt={img}
@@ -39,7 +39,7 @@ const Card = ({
             />
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-3  absolute top-0 -left-32 ">
+        <div className="flex lg:flex-col items-center justify-center gap-3 my-10  absolute lg:top-0 lg:-left-32 bottom-0">
           {tag.map((text) => (
             <Tag text={text} key={`${text}Card`}/>
           ))}

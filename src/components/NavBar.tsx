@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import Logo from "../../logo.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -11,32 +11,34 @@ const NavBar = ({
   iconRef: React.RefObject<HTMLDivElement>;
 }) => {
   const navItem = ["Home", "About", "Skills", "Projects", "Contact"];
-  const tl = gsap.timeline({ paused: true });
+  const tl = useRef(gsap.timeline({ paused: true }));
+  const [navOpen, setNavOpen] = useState<boolean>(false);
 
   const navBarRef = useRef<HTMLDivElement>(null);
   const navItemRef = useRef<HTMLDivElement[]>([]);
 
   useGSAP(() => {
     if (navBarRef.current && navItemRef.current.length) {
-      tl.to(navBarRef.current, {
+      tl.current.to(navBarRef.current, {
         right: 0,
         duration: 0.6,
       }).from(navItemRef.current, {
         x: 400,
         opacity: 0,
-        duration: .6,
+        duration: 0.6,
         stagger: 0.3,
       });
     }
   }, []);
 
-  const handleNav = (check: boolean) => {
-    if (check) {
-      tl.play();
+  // Control the timeline directly when navOpen changes
+  useLayoutEffect(() => {
+    if (navOpen) {
+      tl.current.play();
     } else {
-      tl.reverse();
+      tl.current.reverse();
     }
-  };
+  }, [navOpen]);
 
   // Add wave effect
   useLayoutEffect(() => {
@@ -68,31 +70,38 @@ const NavBar = ({
   }, []);
 
   return (
-    <> 
+    <>
       <nav className="flex items-center justify-between text-white mx-2 lg:mx-12 mt-4 z-10">
-        <div className="h-20 icon " ref={logoRef}>
-          <img
-            src={Logo}
-            alt="logo"
-            className="h-full object-cover logo hover:scale-95 duration-100"
-          />
-        </div>
-        <div className=" text-3xl space-x-12 z-10 fixed lg:right-2" ref={iconRef}>
-          <ul className="flex pe-7 items-center gap-6">
-            <li className="hover:scale-90 duration-100">
-             <a href="https://t.me/codemanoranjan" target="_ban"> <i className="icon ri-telegram-2-line "></i></a>
-            </li>
-            <li onClick={() => handleNav(true)} className="hover:scale-90 duration-100">
-              <i className="icon ri-menu-4-line cursor-pointer "></i>
-            </li>
-          </ul>
+        <div className="flex items-center justify-between w-screen">
+          <div className="w-1/2 h-10 lg:h-20 icon" ref={logoRef}>
+            <img
+              src={Logo}
+              alt="logo"
+              className="h-full object-cover logo hover:scale-95 duration-100"
+            />
+          </div>
+          <div className="text-3xl space-x-12 z-10 lg:right-2 w-1/2" ref={iconRef}>
+            <ul className="flex pe-7 items-center justify-end gap-6">
+              <li className="hover:scale-90 duration-100">
+                <a href="https://t.me/codemanoranjan" target="_ban">
+                  <i className="icon ri-telegram-2-line"></i>
+                </a>
+              </li>
+              <li
+                onClick={() => setNavOpen(true)}
+                className="hover:scale-90 duration-100"
+              >
+                <i className="icon ri-menu-4-line cursor-pointer"></i>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div
           ref={navBarRef}
-          className="navBar fixed top-0 lg:w-1/3 bg-slate-800 w-full bg-opacity-70 h-full z-20 opacity-95 backdrop-blur-2xl  -right-[120%]"
+          className="navBar fixed top-0 lg:w-1/3 bg-slate-800 w-1/2 bg-opacity-70 h-[30%] lg:h-full z-20 opacity-95 backdrop-blur-2xl -right-[100%]"
         >
-          <div className="navItems flex flex-col items-start justify-center space-y-6 text-6xl font-bold h-full">
+          <div className="navItems flex flex-col items-start justify-center space-y-6 text-6xl font-bold h-full relative">
             {navItem.map((item, index) => (
               <div
                 key={index}
@@ -101,7 +110,7 @@ const NavBar = ({
                 }}
               >
                 <a
-                  onClick={() => handleNav(false)}
+                  onClick={() => setNavOpen(false)}
                   href={`#${item}`}
                   className="navItem text-white ps-11 font-sans icon"
                 >
@@ -110,7 +119,7 @@ const NavBar = ({
               </div>
             ))}
             <div
-              onClick={() => handleNav(false)}
+              onClick={() => setNavOpen(false)}
               className="closeBtn absolute top-0 right-10 bg-slate-900 rounded-full text-xl w-12 h-12 text-center flex items-center justify-center cursor-pointer hover:scale-95 duration-500 hover:bg-white hover:text-slate-900"
             >
               <i className="ri-close-large-line icon"></i>

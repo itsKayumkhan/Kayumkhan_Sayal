@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({ text, cb, href ,isDownload}) => {
             }
           }}
           download={isDownload ? true : false}
-          className="relative inline-flex items-center justify-center px-12 py-4 text-2xl font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+          className="relative inline-flex items-center justify-center px-5 lg:px-12 lg:py-4 py-3 text-lg lg:text-2xl font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
           role="button"
         >
           {text}

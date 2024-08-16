@@ -86,7 +86,7 @@ const Contact = () => {
     <ContainerWrapper>
       <>
         {" "}
-        <div className=" contact z-10" ref={hadingRef}>
+        <div className="contact z-10" ref={hadingRef}>
           <Hading text="Contact " refs={hadingRef} />
         </div>
         <section
@@ -97,12 +97,12 @@ const Contact = () => {
           <div className="absolute top-0 z-[-2] h-full w-screen bg-[#000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-24">
-              <div className="flex items-center lg:mb-0 mb-10  p-12  relative  rounded-xl">
+              <div className="flex items-center lg:mb-0 mb-10  lg:p-12  relative  rounded-xl">
                 <div>
-                  <h4 className="text-white text-base font-medium  mb-4 lg:text-left text-center">
+                  <h4 className="hidden md:block text-white text-base font-medium  mb-4 lg:text-left text-center">
                     Contact Us
                   </h4>
-                  <h2 className="text-slate-300 font-manrope text-4xl font-semibold leading-10 mb-9 lg:text-left text-center">
+                  <h2 className="text-slate-300 font-manrope text-4xl font-semibold leading-10 mb-9 lg:text-left text-center ">
                     Any message for me
                   </h2>
                   <form onSubmit={(e)=>onSubmit(e)}>
@@ -111,7 +111,7 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={(e)=>handleChange(e)}
-                      className=" w-full  h-14 shadow-xl focus:shadow-sm duration-150 focus:border-blue-600  ease-in text-slate-900 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-1 px-4 mb-4"
+                      className=" w-full bg-slate-800 text-white  h-14 shadow-xl focus:shadow-sm duration-150 ease-in  placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-1 px-4 mb-4"
                       placeholder="Name"
                     />
                     <input
@@ -119,7 +119,7 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={(e)=>handleChange(e)}
-                      className="w-full  h-14 shadow-xl focus:shadow-sm  duration-150 focus:border-blue-600  ease-in text-slate-900 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-1 px-4 mb-4"
+                      className="w-full bg-slate-800 text-white  h-14 shadow-xl focus:shadow-sm  duration-150 ease-in  placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-1 px-4 mb-4"
                       placeholder="Email"
                     />
                     <textarea
@@ -127,7 +127,7 @@ const Contact = () => {
                       name="message"
                       value={formData.message}
                       onChange={(e)=>handleChange(e)}
-                      className="w-full  h-48 shadow-xl focus:shadow-sm duration-150 focus:border-blue-600  ease-in resize-none text-slate-900 placeholder-text-400 text-lg font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none px-4 py-4 mb-4"
+                      className="w-full bg-slate-800 text-white  h-48 shadow-xl focus:shadow-sm duration-150 ease-in resize-none  placeholder-text-400 text-lg font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none px-4 py-4 mb-4"
                       placeholder="type your message"
                       defaultValue={""}
                     />
