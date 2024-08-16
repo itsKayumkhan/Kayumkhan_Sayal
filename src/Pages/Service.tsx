@@ -12,7 +12,7 @@ const Service = () => {
   const hadingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (hadingRef.current) {
+   if(window.innerWidth >1147){ if (hadingRef.current) {
       gsap.from(hadingRef.current, {
         x: 500,
         opacity: 0,
@@ -26,7 +26,7 @@ const Service = () => {
         },
         duration: 0.5,
       });
-    }
+    }}
   }, []);
 
   const data = serviceObj?.map((card) => {

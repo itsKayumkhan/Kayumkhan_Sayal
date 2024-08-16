@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Hading from "../components/Hading";
 import { useRef } from "react";
-import ContainerWrapper from "../components/ContainerWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +35,8 @@ const Skills = () => {
     "Stripe",
     "Razorpay",
   ];
-    const hadingRef = useRef<HTMLDivElement>(null)
+  const hadingRef = useRef<HTMLDivElement>(null);
+
   useGSAP(() => {
     icon.forEach((tag) => {
       gsap.to(`#${tag}`, {
@@ -55,35 +55,36 @@ const Skills = () => {
         },
       });
     });
-    gsap.from(".skill", {
-      x: 500,
-      opacity: 0,
-      zIndex: -1,
-      scrollTrigger: {
-        trigger: ".skill",
-        scroller: "body",
-        start: "top 90%",
-        end: "top 20%",
-        scrub: true,
-      },
-      duration: 0.5,
-    });
+    if (window.innerWidth > 1147) {
+      gsap.from(".skill", {
+        x: 500,
+        opacity: 0,
+        zIndex: -1,
+        scrollTrigger: {
+          trigger: ".skill",
+          scroller: "body",
+          start: "top 90%",
+          end: "top 20%",
+          scrub: true,
+        },
+        duration: 0.5,
+      });
+    }
   }, []);
 
   return (
     <>
       <div
-        className="main flex items-center justify-center  z-10 flex-col h-[130vh] "
+        className="main flex items-center justify-center  z-10 flex-col h-[150vh] "
         id="Skills"
       >
-        <div className="h-[20%] skill my-12 -z-100 " ref={hadingRef}>
-         
-          <Hading text="Skills" refs={hadingRef}/>
+        <div className="h-[20%] skill my-12 -z-100" ref={hadingRef}>
+          <Hading text="Skills" refs={hadingRef} />
         </div>
         <div className="w-[80%] flex items-end justify-center flex-wrap skills gap-4 ">
           {icon.map((item, index) => (
             <h1
-              className="iconSkill z-10  border-white border-[2px] rounded-full lg:py-4 lg:px-4 px-2 py-1 lg:text-3xl blur-xl opacity-0"
+              className="iconSkill z-10  border-white border-[2px] rounded-full lg:py-4 lg:px-4 px-3 py-2 lg:text-3xl md:blur-xl md:opacity-0"
               id={item}
               key={index}
             >

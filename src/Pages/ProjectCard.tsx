@@ -21,25 +21,26 @@ const ProjectCard = () => {
       img={card.img}
     />
   ));
-
   useEffect(() => {
-    if (projectRef.current) {
-      gsap.from(projectRef.current, {
-        x: 500,
-        opacity: 0,
-        zIndex: -1,
-        scrollTrigger: {
-          trigger: projectRef.current,
-          scroller: "body",
-          start: "top 90%",
-          end: "top 20%",
-          scrub: true,
-        },
-        duration: 0.5,
-      });
+    if (window.innerWidth > 1147) {
+      if (projectRef.current) {
+        gsap.from(projectRef.current, {
+          x: 500,
+          opacity: 0,
+          zIndex: -1,
+          scrollTrigger: {
+            trigger: projectRef.current,
+            scroller: "body",
+            start: "top 90%",
+            end: "top 20%",
+            scrub: true,
+          },
+          duration: 0.5,
+        });
+      }
+      // Include projectRef as a dependency
     }
-  }, [projectRef]); // Include projectRef as a dependency
-
+  }, [projectRef]);
   return (
     <ContainerWrapper>
       <>
@@ -48,7 +49,11 @@ const ProjectCard = () => {
         </div>
 
         <div className="projects my-12" ref={projectRef}>
-          <Hading text="Projects" refs={hadingRef} />
+          <Hading
+            text="Projects"
+            refs={hadingRef}
+            classes="absolute lg:left-24 top-[-12rem]  text-[5rem] left-[-9rem] my-12"
+          />
         </div>
         <div className="flex w-full h-[140vh]">
           <Corousel data={data} />

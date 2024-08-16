@@ -14,7 +14,7 @@ const Card = ({
   key: string;
 }) => {
 
-
+console.log(key)
 
   return (
     <a

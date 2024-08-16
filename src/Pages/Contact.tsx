@@ -1,9 +1,9 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
 import ContainerWrapper from "../components/ContainerWrapper";
 import Hading from "../components/Hading";
 import toast from "react-hot-toast";
+import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
   const hadingRef = useRef<HTMLDivElement>(null);
@@ -60,7 +60,7 @@ const Contact = () => {
 
 
   useEffect(() => {
-    const animation = gsap.from(".contact", {
+   if(window.innerWidth >1147){ const animation = gsap.from(".contact", {
       x: 500,
       opacity: 0,
       zIndex: -1,
@@ -76,7 +76,7 @@ const Contact = () => {
   
     return () => {
       animation.kill();
-    };
+    };}
   }, []);
   
 
@@ -86,7 +86,7 @@ const Contact = () => {
     <ContainerWrapper>
       <>
         {" "}
-        <div className="contact z-10" ref={hadingRef}>
+        <div className="contact z-10 hidden lg:block" ref={hadingRef}>
           <Hading text="Contact " refs={hadingRef} />
         </div>
         <section

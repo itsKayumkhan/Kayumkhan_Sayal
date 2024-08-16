@@ -12,9 +12,8 @@ import Skills from "./Pages/Skills";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { textAnimation, navAnimation } from "./animation/animation";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/all";
 import { Toaster } from "react-hot-toast";
-
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {

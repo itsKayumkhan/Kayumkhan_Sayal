@@ -39,8 +39,8 @@ const Hading = ({
   return (
     
     <div
-      className={`text-[5rem] lg:text-[40vh] font-bold  ${
-        classes ? classes : "lg:my-32 lg:-left-[38rem]   lg:-top-[19rem] left-[-7rem] top-[1rem]"
+      className={` font-bold  ${
+        classes ? classes : "lg:my-32 lg:-left-[38rem]   lg:-top-[19rem] left-[-7rem] top-[1rem] text-[5rem] lg:text-[40vh]"
       }  relative head w-full `}
     >
       <h1 className="opacity-20 font-sans absolute -z-10"> {text}</h1>
