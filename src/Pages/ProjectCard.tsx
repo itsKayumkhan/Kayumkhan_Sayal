@@ -52,7 +52,6 @@ const ProjectCard = () => {
           <Hading
             text="Projects"
             refs={hadingRef}
-            classes="absolute lg:left-24 top-[-12rem]  text-[5rem] left-[-9rem] my-12"
           />
         </div>
         <div className="flex w-full h-[140vh]">

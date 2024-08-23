@@ -22,7 +22,7 @@ console.log(key)
       href={href}
       className=" scrollProject flex justify-center items-center h-[100vh] min-w-[80%] relative flex-col"
     >
-      <div className="container perspective-1000 relative lg:w-[70%] lg:h-[80%] w-full h-full rounded-lg">
+      <div className="container perspective-1000 relative lg:w-[70%] lg:h-[80%]  h-full rounded-lg">
         <a href="#" className="link-1 " />
         <a href="#" className="link-2 " />
         <a href="#" className="link-3 " />
@@ -31,11 +31,11 @@ console.log(key)
           <div className="card-header p-2 bg-black text-white text-lg border border-white rounded-t-lg">
             {title}
           </div>
-          <div className="w-1/3 h-1/3 lg:w-full lg:h-full flex items-center justify-center rounded-lg">
+          <div className=" h-[full] lg:w-full lg:h-full flex items-center justify-center rounded-lg">
             <img
               src={img}
               alt={img}
-              className="w-full h-full object-contain rounded-b-lg "
+              className="w-[100px] h-[200px] md:h-full md:w-full object-contain rounded-b-lg "
             />
           </div>
         </div>
