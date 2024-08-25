@@ -6,6 +6,18 @@ export const projectObj = [
     title: "Movie Info",
   },
   {
+    img: "https://res.cloudinary.com/dslgstzex/image/upload/v1724580864/WhatsApp_Image_2024-08-25_at_3.44.12_PM_aojanw.jpg",
+    link: "https://melodynest.netlify.app/",
+    tags: ["React", "Html", "Css", "Api's", "Java Script","Tailwind Css"],
+    title: "Melody Nest",
+  },
+  {
+    img: "https://res.cloudinary.com/dslgstzex/image/upload/v1724581829/image_fpvmfp.png",
+    link: "https://sabkikhidmat.netlify.app/",
+    tags: [ "Html", "Css", "Java Script","Bootstrap Css"],
+    title: "Sabkikhidmat",
+  },
+  {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643853/Blog_weepii.png",
     link: "#",
     tags: ["MERN","html","css","java script","Tailwind Css"],
