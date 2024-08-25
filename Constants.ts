@@ -19,7 +19,7 @@ export const projectObj = [
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643853/Blog_weepii.png",
-    link: "#",
+    link: "https://thinkandwrite.netlify.app/",
     tags: ["MERN","html","css","java script","Tailwind Css"],
     title: "Blog",
   },
@@ -129,3 +129,4 @@ export const serviceObj = [
       "Get in touch for any inquiries or services. Providing responsive and personalized communication to assist with your needs and projects.",
   },
 ];
+  
