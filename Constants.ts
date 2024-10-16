@@ -130,3 +130,4 @@ export const serviceObj = [
   },
 ];
   
+export  const isMobile = window.innerWidth <= 2280;

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { serviceObj } from "../../Constants";
+import { isMobile, serviceObj } from "../../Constants";
 import Corousel from "../components/Corousel";
 import Hading from "../components/Hading";
 import ServiceCard from "../components/ServiceCard";
@@ -12,21 +12,23 @@ const Service = () => {
   const hadingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-   if(window.innerWidth >1147){ if (hadingRef.current) {
-      gsap.from(hadingRef.current, {
-        x: 500,
-        opacity: 0,
-        zIndex: -1,
-        scrollTrigger: {
-          trigger: hadingRef.current,
-          scroller: "body",
-          start: "top 90%",
-          end: "top 20%",
-          scrub: true,
-        },
-        duration: 0.5,
-      });
-    }}
+    if (!isMobile) {
+      if (hadingRef.current) {
+        gsap.from(hadingRef.current, {
+          x: 500,
+          opacity: 0,
+          zIndex: -1,
+          scrollTrigger: {
+            trigger: hadingRef.current,
+            scroller: "body",
+            start: "top 90%",
+            end: "top 20%",
+            scrub: true,
+          },
+          duration: 0.5,
+        });
+      }
+    }
   }, []);
 
   const data = serviceObj?.map((card) => {

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Hading from "../components/Hading";
 import { useRef } from "react";
+import { isMobile } from "../../Constants";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,7 @@ const Skills = () => {
   const hadingRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    icon.forEach((tag) => {
+    if(!isMobile) {    icon.forEach((tag) => {
       gsap.to(`#${tag}`, {
         opacity: 1,
         filter: "blur(0px)",
@@ -54,7 +55,6 @@ const Skills = () => {
         },
       });
     });
-    if (window.innerWidth > 1147) {
       gsap.from(".skill", {
         x: 500,
         opacity: 0,

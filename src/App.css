@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 body {
-  overflow-x: hidden;
   background: #00091c;
   user-select: none; /* Disable text selection */
   -webkit-user-select: none; /* For Safari */
   -moz-user-select: none; /* For Firefox */
   -ms-user-select: none; 
+  overflow-x: hidden;
 }
 svg{
   transition:all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;

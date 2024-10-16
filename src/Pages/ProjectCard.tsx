@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import ContainerWrapper from "../components/ContainerWrapper";
 import Corousel from "../components/Corousel";
 import Hading from "../components/Hading";
-import { projectObj } from "../../Constants";
+import { isMobile, projectObj } from "../../Constants";
 import Card from "../components/Card";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -22,7 +22,7 @@ const ProjectCard = () => {
     />
   ));
   useEffect(() => {
-    if (window.innerWidth > 1147) {
+    if (!isMobile) {
       if (projectRef.current) {
         gsap.from(projectRef.current, {
           x: 500,
@@ -41,6 +41,7 @@ const ProjectCard = () => {
       // Include projectRef as a dependency
     }
   }, [projectRef]);
+
   return (
     <ContainerWrapper>
       <>
@@ -49,13 +50,16 @@ const ProjectCard = () => {
         </div>
 
         <div className="projects my-12" ref={projectRef}>
-          <Hading
-            text="Projects"
-            refs={hadingRef}
-          />
+          <Hading text="Projects" refs={hadingRef} />
         </div>
         <div className="flex w-full h-[140vh]">
-          <Corousel data={data} />
+          {!isMobile ? (
+            <Corousel data={data} />
+          ) : (
+            <div className="w-full flex flex-col item-center h-full overflow-scroll">
+              {data}
+            </div>
+          )}
         </div>
       </>
     </ContainerWrapper>

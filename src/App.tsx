@@ -14,6 +14,7 @@ import gsap from "gsap";
 import { textAnimation, navAnimation } from "./animation/animation";
 import { ScrollTrigger } from "gsap/all";
 import { Toaster } from "react-hot-toast";
+import { isMobile } from "../Constants";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -26,8 +27,10 @@ function App() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [scrollBtn, setScrollBtn] = useState(false);
 
+  console.log(window.innerWidth);
+
   useLayoutEffect(() => {
-    const t1 = gsap.timeline();
+   if(!isMobile) {const t1 = gsap.timeline();
     if (
       logoRef.current &&
       iconRef.current &&
@@ -40,40 +43,41 @@ function App() {
         .from(headingRef.current, textAnimation)
         .from(desRef.current, textAnimation)
         .from(buttonRef.current, textAnimation);
-    }
+    }}
   }, []);
-
   useLayoutEffect(() => {
-    const handleCursor = (e: MouseEvent) => {
-      if (mouseRef.current) {
-        gsap.to(mouseRef.current, {
-          x: e.clientX,
-          y: e.clientY,
-          ease: "power3.out",
-          duration: 0.3,
-          opacity: 1,
-        });
+    if (!isMobile) {
+      const handleCursor = (e: MouseEvent) => {
+        if (mouseRef.current) {
+          gsap.to(mouseRef.current, {
+            x: e.clientX,
+            y: e.clientY,
+            ease: "power3.out",
+            duration: 0.3,
+            opacity: 1,
+          });
 
+          if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+          }
+
+          timeoutRef.current = setTimeout(() => {
+            if (mouseRef.current) {
+              gsap.to(mouseRef.current, { opacity: 0, duration: 0.5 });
+            }
+          }, 1000);
+        }
+      };
+
+      window.addEventListener("mousemove", handleCursor);
+
+      return () => {
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);
         }
-
-        timeoutRef.current = setTimeout(() => {
-          if (mouseRef.current) {
-            gsap.to(mouseRef.current, { opacity: 0, duration: 0.5 });
-          }
-        }, 2000);
-      }
-    };
-
-    window.addEventListener("mousemove", handleCursor);
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      window.removeEventListener("mousemove", handleCursor);
-    };
+        window.removeEventListener("mousemove", handleCursor);
+      };
+    }
   }, []);
 
   const gotoTop = () => {
@@ -114,7 +118,10 @@ function App() {
       <Contact />
       <Footer />
       {scrollBtn && (
-        <button onClick={gotoTop} className="button fixed bottom-8 right-8 z-20">
+        <button
+          onClick={gotoTop}
+          className="button fixed bottom-8 right-8 z-20"
+        >
           <svg className="svgIcon" viewBox="0 0 384 512">
             <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
           </svg>

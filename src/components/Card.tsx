@@ -20,7 +20,7 @@ console.log(key)
     <a
     key={key}
       href={href}
-      className=" scrollProject flex justify-center items-center h-[100vh] min-w-[80%] relative flex-col"
+      className=" scrollProject flex justify-center items-center h-[100vh] min-w-[80%] relative flex-col my-4"
     >
       <div className="container perspective-1000 relative lg:w-[70%] lg:h-[80%]  h-full rounded-lg">
         <a href="#" className="link-1 " />
@@ -35,11 +35,11 @@ console.log(key)
             <img
               src={img}
               alt={img}
-              className="w-[100px] h-[200px] md:h-full md:w-full object-contain rounded-b-lg "
+              className="md:h-full md:w-full object-contain rounded-b-lg "
             />
           </div>
         </div>
-        <div className="flex lg:flex-col items-center justify-center gap-3 my-10  absolute lg:top-0 lg:-left-32 bottom-0">
+        <div className="md:flex lg:flex-col items-center justify-center gap-3 my-10  absolute lg:top-0 lg:-left-32 hidden">
           {tag.map((text) => (
             <Tag text={text} key={`${text}Card`}/>
           ))}
