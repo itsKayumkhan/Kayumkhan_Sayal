@@ -53,7 +53,7 @@ const About = () => {
           />
         </div>
         <div className="h-[80%]">
-          <p className="info text-xl lg:px-24 text-left px-2 lg:mt-24 mt-10 md:blur-md md:opacity-0">
+          <p className="info text-xl lg:px-24 text-left px-2 lg:mt-24 mt-10 lg:blur-md lg:opacity-0">
             I'm an enthusiastic and motivated individual with a deep passion for
             coding and problem-solving. As a fresher in the industry, I'm
             thrilled to embark on my journey as a developer. I find joy in
@@ -63,7 +63,7 @@ const About = () => {
             maintainable code is something I take great pride in, building a
             solid foundation for my work.
           </p>
-          <p className="info text-xl lg:px-24 text-left px-2 lg:mt-24 md:blur-md md:opacity-0 mt-10">
+          <p className="info text-xl lg:px-24 text-left px-2 lg:mt-24 lg:blur-md lg:opacity-0 mt-10">
             I run the YouTube channel to help students solve daily life problems
             that I faced in the early days of learning.
             <a

@@ -28,7 +28,7 @@ function App() {
   const [scrollBtn, setScrollBtn] = useState(false);
 
   console.log(window.innerWidth);
-
+console.log(isMobile)
   useLayoutEffect(() => {
    if(!isMobile) {const t1 = gsap.timeline();
     if (

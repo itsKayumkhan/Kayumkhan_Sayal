@@ -23,10 +23,10 @@ console.log(key)
       className=" scrollProject flex justify-center items-center h-[100vh] min-w-[80%] relative flex-col my-4"
     >
       <div className="container perspective-1000 relative lg:w-[70%] lg:h-[80%]  h-full rounded-lg">
-        <a href="#" className="link-1 " />
-        <a href="#" className="link-2 " />
-        <a href="#" className="link-3 " />
-        <a href="#" className="link-4 " />
+        <a href={href} target="_blank" className="link-1 " />
+        <a href={href} target="_blank" className="link-2 " />
+        <a href={href} target="_blank" className="link-3 " />
+        <a href={href} target="_blank" className="link-4 " />
         <div className=" card bg-white rounded-lg border border-black relative transition-all duration-300 ease-out transform origin-center w-full  shadow-none">
           <div className="card-header p-2 bg-black text-white text-lg border border-white rounded-t-lg">
             {title}

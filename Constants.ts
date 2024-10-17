@@ -13,7 +13,7 @@ export const projectObj = [
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1724581829/image_fpvmfp.png",
-    link: "https://sabkikhidmat.netlify.app/",
+    link: "https://sabkikhidmat.netlify.app",
     tags: [ "Html", "Css", "Java Script","Bootstrap Css"],
     title: "Sabkikhidmat",
   },
@@ -130,4 +130,4 @@ export const serviceObj = [
   },
 ];
   
-export  const isMobile = window.innerWidth <= 2280;
+export  const isMobile = window.innerWidth <= 769;
