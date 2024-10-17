@@ -1,6 +1,5 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { isMobile } from "../../Constants";
 
 const Corousel = ({ data }: { data: Array<any> }) => {
   return (
