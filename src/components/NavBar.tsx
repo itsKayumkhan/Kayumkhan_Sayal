@@ -6,9 +6,11 @@ import { useGSAP } from "@gsap/react";
 const NavBar = ({
   logoRef,
   iconRef,
+  mouseRef,
 }: {
   logoRef: React.RefObject<HTMLDivElement>;
   iconRef: React.RefObject<HTMLDivElement>;
+  mouseRef: React.RefObject<HTMLDivElement>;
 }) => {
   const navItem = ["Home", "About", "Skills", "Projects", "Contact"];
   const tl = useRef(gsap.timeline({ paused: true }));
@@ -72,6 +74,8 @@ const NavBar = ({
     });
   }, []);
 
+  useLayoutEffect(() => {}, []);
+
   // Detect screen width to determine mobile or desktop
   useEffect(() => {
     const handleResize = () => {
@@ -92,24 +96,32 @@ const NavBar = ({
 
   return (
     <>
-        <nav className="flex items-center justify-between text-white mx-2 lg:mx-12 mt-4 z-10">
-          <div className="flex items-center justify-between w-screen">
-            <div className="w-1/2 h-10 lg:h-20 icon" ref={logoRef}>
-              <img
-                src={Logo}
-                alt="logo"
-                className="h-full object-cover logo hover:scale-95 duration-100"
-              />
-            </div>
-      {onMobile && 
+      <nav className="flex items-center justify-between text-white mx-2 lg:mx-12 mt-4 z-10">
+        <div className="flex items-center justify-between w-screen">
+          <div className="w-1/2 h-10 lg:h-20 icon" ref={logoRef}>
+            <img
+              src={Logo}
+              alt="logo"
+              className="h-full object-cover logo hover:scale-95 duration-100"
+            />
+          </div>
+          {onMobile && (
             <div
               className="text-3xl space-x-12 z-10 lg:right-2 w-1/2 fixed"
               ref={iconRef}
             >
               <ul className="flex pe-7 items-center justify-end gap-6 w-screen lg:w-full">
+                {/* <div className="absolute -top-20 right-11 translate-x-[-50%] translate-y-[-50%] circle w-12 h-12 bg-white rounded-full">
+
+                </div> */}
                 <li className="hover:scale-90 duration-100">
-                  <a href="https://t.me/codemanoranjan" target="_ban">
-                    <i className="icon ri-telegram-2-line"></i>
+                  <a
+                    href="https://t.me/kayumkhansayal"
+                    className="relative"
+                    target="_ban"
+                  >
+                  
+                      <i className="icon ri-telegram-2-line "></i>
                   </a>
                 </li>
                 <li
@@ -148,10 +160,10 @@ const NavBar = ({
                   </div>
                 </div>
               </ul>
-            </div>}
-          </div>
-        </nav>
-      
+            </div>
+          )}
+        </div>
+      </nav>
     </>
   );
 };

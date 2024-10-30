@@ -4,92 +4,108 @@ export const projectObj = [
     link: "https://movixinfo.netlify.app/",
     tags: ["React", "Html", "Css", "Api's", "Java Script"],
     title: "Movie Info",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1724580864/WhatsApp_Image_2024-08-25_at_3.44.12_PM_aojanw.jpg",
     link: "https://melodynest.netlify.app/",
-    tags: ["React", "Html", "Css", "Api's", "Java Script","Tailwind Css"],
+    tags: ["React", "Html", "Css", "Api's", "Java Script", "Tailwind Css"],
     title: "Melody Nest",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1724581829/image_fpvmfp.png",
     link: "https://sabkikhidmat.netlify.app",
-    tags: [ "Html", "Css", "Java Script","Bootstrap Css"],
+    tags: ["Html", "Css", "Java Script", "Bootstrap Css"],
     title: "Sabkikhidmat",
+    type: "client"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643853/Blog_weepii.png",
     link: "https://thinkandwrite.netlify.app/",
-    tags: ["MERN","html","css","java script","Tailwind Css"],
+    tags: ["MERN", "html", "css", "java script", "Tailwind Css"],
     title: "Blog",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643824/musicPlayer_cpjq3k.png",
     link: "https://itskayumkhan.github.io/MusicPlayer/",
     tags: ["html", "css", "java script"],
     title: "Music Player",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643827/ecommerce_aycrqn.png",
     link: "https://e-commerceclient.netlify.app/",
     tags: ["MERN", "API's", "Tailwind Css", "External library's"],
     title: "Ecommerce",
+    type: "client"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643912/zomoto_azf3g9.png",
     link: "https://itskayumkhan.github.io/Cloan_Zomato/",
     tags: ["html", "css", "java script"],
     title: "Zomoto",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643763/carParking_ld8ioe.png",
     link: "#",
     tags: ["MERN", "Matrial Ui", "zod", "Api's", "Tailwind Css", "React Forms"],
     title: "Car Parking",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643860/todo_dzhczx.png",
     link: "https://todokeepapp.netlify.app/",
     tags: ["html", "css", "java script"],
     title: "Todo",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643752/colorPicker_rsehzx.png",
     link: "https://itskayumkhan.github.io/ColorPicker/",
     tags: ["html", "css", "java script"],
     title: "Color Picker",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723644484/WhatsApp_Image_2024-08-14_at_7.37.33_PM_ooepsc.jpg",
     link: "https://itskayumkhan.github.io/51Club-offical/",
     tags: ["html", "css", "java script"],
     title: "51 Club - official website",
+    type: "client"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643916/standford_dt3e8c.png",
     link: "#",
     tags: ["html", "css", "java script"],
     title: "Standford",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643772/jokes_op2rhy.png",
     link: "https://itskayumkhan.github.io/Joke_Master/",
     tags: ["html", "css", "java script", "Api"],
     title: "Jokes",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643857/quotes_jggh0z.png",
     link: "#",
     tags: ["html", "css", "java script", "Api"],
     title: "Quotes",
+    type: "personal"
   },
   {
     img: "https://res.cloudinary.com/dslgstzex/image/upload/v1723643854/textCounter_bfnoux.png",
     link: "#",
     tags: ["html", "css", "java script", "Api"],
     title: "Text Counter",
+    type: "personal"
   },
 ];
+
 
 export const serviceObj = [
   {
