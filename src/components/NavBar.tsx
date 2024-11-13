@@ -6,11 +6,9 @@ import { useGSAP } from "@gsap/react";
 const NavBar = ({
   logoRef,
   iconRef,
-  mouseRef,
 }: {
   logoRef: React.RefObject<HTMLDivElement>;
   iconRef: React.RefObject<HTMLDivElement>;
-  mouseRef: React.RefObject<HTMLDivElement>;
 }) => {
   const navItem = ["Home", "About", "Skills", "Projects", "Contact"];
   const tl = useRef(gsap.timeline({ paused: true }));
