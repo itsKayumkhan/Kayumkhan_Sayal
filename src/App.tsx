@@ -15,6 +15,7 @@ import { textAnimation, navAnimation } from "./animation/animation";
 import { ScrollTrigger } from "gsap/all";
 import { Toaster } from "react-hot-toast";
 import { isMobile } from "../Constants";
+import Front from "./components/Front";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {

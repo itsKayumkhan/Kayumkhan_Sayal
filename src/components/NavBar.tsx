@@ -118,7 +118,7 @@ const NavBar = ({
                     className="relative"
                     target="_ban"
                   >
-                  
+
                       <i className="icon ri-telegram-2-line "></i>
                   </a>
                 </li>

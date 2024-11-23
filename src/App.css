@@ -5,7 +5,7 @@ body {
   user-select: none; /* Disable text selection */
   -webkit-user-select: none; /* For Safari */
   -moz-user-select: none; /* For Firefox */
-  -ms-user-select: none; 
+  -ms-user-select: none;
   overflow-x: hidden;
 }
 svg{
@@ -537,7 +537,7 @@ svg:hover{
   display: flex;
   flex-direction: column;
 }
-/* 
+/*
 .svgLogo {
   animation:scroll 40s linear infinite ;
 }
@@ -646,4 +646,3 @@ svg:hover{
   background-color: #555555; /* Lighter color on hover for better visibility */
   border-radius: 12px; /* Keep rounded corners on hover */
 }
-
