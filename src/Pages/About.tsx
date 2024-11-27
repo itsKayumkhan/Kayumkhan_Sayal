@@ -74,7 +74,7 @@ const About = () => {
               <div className="flex items-center gap-2 ">
                 <img
                   className="w-[50px] h-[50px] object-cover rounded-full "
-                  src="../../public/cLogog.jpg"
+                  src="https://res.cloudinary.com/dslgstzex/image/upload/v1732729768/channels4_profile_mvb984.jpg"
                   alt="channel logo"
                 />
               </div>

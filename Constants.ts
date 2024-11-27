@@ -104,6 +104,13 @@ export const projectObj = [
     title: "Text Counter",
     type: "personal"
   },
+  {
+    img: "https://res.cloudinary.com/dslgstzex/image/upload/v1732728061/image_wnwnfi.png",
+    link: "https://dwwinhack.netlify.app/",
+    tags: ["html", "css", "java script" ],
+    title: "Mins Game Hack",
+    type: "client"
+  },
 ];
 
 
@@ -145,5 +152,5 @@ export const serviceObj = [
       "Get in touch for any inquiries or services. Providing responsive and personalized communication to assist with your needs and projects.",
   },
 ];
-  
+
 export  const isMobile = window.innerWidth <= 769;

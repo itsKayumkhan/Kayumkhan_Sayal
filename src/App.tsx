@@ -1,21 +1,21 @@
-import "./App.css";
 import "remixicon/fonts/remixicon.css";
-import NavBar from "./components/NavBar";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import ProjectCard from "./Pages/ProjectCard";
+import "./App.css";
 import Footer from "./components/Footer";
-import Service from "./Pages/Service";
+import NavBar from "./components/NavBar";
+import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Home from "./Pages/Home";
+import ProjectCard from "./Pages/ProjectCard";
+import Service from "./Pages/Service";
 import Skills from "./Pages/Skills";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { textAnimation, navAnimation } from "./animation/animation";
 import { ScrollTrigger } from "gsap/all";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import { isMobile } from "../Constants";
-import Front from "./components/Front";
+import { navAnimation, textAnimation } from "./animation/animation";
+import WebsiteTour from "./components/WebsiteTour";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -101,6 +101,8 @@ console.log(isMobile)
     };
   }, []);
 
+  const imgArray:string[] = ['https://res.cloudinary.com/dslgstzex/image/upload/v1732703286/pic1_pwyp0w.png','https://res.cloudinary.com/dslgstzex/image/upload/v1732703297/pic2_nkjtoi.png','https://res.cloudinary.com/dslgstzex/image/upload/v1732703288/pic3_qusi1o.png ']
+
   return (
     <>
       <Toaster />
@@ -116,6 +118,7 @@ console.log(isMobile)
       <Skills />
       <ProjectCard />
       <Service />
+      <WebsiteTour imgArray={imgArray} title="Website Tour"/>
       <Contact />
       <Footer />
       {scrollBtn && (

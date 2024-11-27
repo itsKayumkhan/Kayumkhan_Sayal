@@ -88,7 +88,7 @@ const Skills = () => {
         <div className="w-[80%] flex items-end justify-center flex-wrap skills gap-4 z-4 ">
           {icon.map((item, index) => (
             <h1
-              className="iconSkill z-1  border-white border-[2px] rounded-full lg:py-4 lg:px-4 px-3 py-2 lg:text-3xl lg:blur-xl lg:opacity-0"
+              className="iconSkill z-1  border-white border-[2px] rounded-full lg:py-4 lg:px-4 px-3 py-2 lg:text-3xl lg:blur-xl lg:opacity-0 font-bold focus:outline-none focus:ring-4 focus:ring-white/50 "
               id={item}
               key={index}
             >

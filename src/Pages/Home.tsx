@@ -44,8 +44,8 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
           <div ref={buttonRef}>
             <Button
               text="Resume"
-              href="../../public/kayumkhanResume.pdf"
-              isDownload={true}
+              href="/src/components/Resume.html"
+           
             />
           </div>
         </div>
