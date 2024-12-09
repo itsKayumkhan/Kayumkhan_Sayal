@@ -16,6 +16,7 @@ import { Toaster } from "react-hot-toast";
 import { isMobile } from "../Constants";
 import { navAnimation, textAnimation } from "./animation/animation";
 import WebsiteTour from "./components/WebsiteTour";
+import Marque from "./components/Marque";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -115,8 +116,11 @@ console.log(isMobile)
       <NavBar logoRef={logoRef} iconRef={iconRef} />
       <Home buttonRef={buttonRef} headingRef={headingRef} desRef={desRef} />
       <About />
+      <Marque/>
+
       <Skills />
       <ProjectCard />
+      <Marque/>
       <Service />
       <WebsiteTour imgArray={imgArray} title="Website Tour"/>
       <Contact />

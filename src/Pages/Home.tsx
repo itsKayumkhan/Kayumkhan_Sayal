@@ -12,6 +12,7 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
   const logoRef = useRef<HTMLImageElement>(null);
+//   const webRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     gsap.from(".logoImg", {
@@ -23,6 +24,11 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
       rotateY: 360,
       duration: 1,
     });
+    // gsap.from(webRef.current, {
+    //   x: 700,
+    //   duration:2,
+    //   scale:2
+    // })
   }, []);
 
   return (
@@ -45,9 +51,10 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
             <Button
               text="Resume"
               href="/src/components/Resume.html"
-           
+
             />
           </div>
+          {/* <h1 ref={webRef} className="text-4xl lg:text-[12rem]  absolute bottom-48 font-bold z-10">WEB DEV</h1> */}
         </div>
 
         <div className="absolute top-[30%] right-2">
@@ -57,7 +64,7 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
         <div className="hidden md:block img absolute -top-32 left-[30%] -z-1">
           <img src={gLogo} alt="gLogo" className="-z-1 logoImg" ref={logoRef} />
         </div>
-        <div id="scroll-wrapper" className="">
+        <div id="scroll-wrapper" className=" absolute ">
           <div id="scroll-wrapper-inner">
             <div id="scroll-title">Scroll</div>
             <div id="scroll-down"></div>
