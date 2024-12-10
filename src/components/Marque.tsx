@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 
 const Marque = () => {
-  const items = ["Web Developer", "PhotoGrapy", "Video Editing", "Creator", "Animation"];
+  const items = ["Web Developer", "Photography", "Video Editing", "Creator", "Animation"];
 
   return (
     <div className="relative overflow-hidden bg-[#0f0f26] text-white py-4 border-2 border-x-0 my-28">
