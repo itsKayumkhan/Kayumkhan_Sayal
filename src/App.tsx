@@ -116,7 +116,7 @@ console.log(isMobile)
       <NavBar logoRef={logoRef} iconRef={iconRef} />
       <Home buttonRef={buttonRef} headingRef={headingRef} desRef={desRef} />
       <About />
-      <Marque/>
+     { !isMobile && <Marque/>}
 
       <Skills />
       <ProjectCard />

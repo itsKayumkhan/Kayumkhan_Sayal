@@ -47,12 +47,15 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
           <h2 className="text-2xl mt-4" ref={desRef}>
             Full Stack Developer
           </h2>
-          <div ref={buttonRef}>
+          <div ref={buttonRef} className="flex justify-center items-center gap-3 flex-col lg:flex-row">
             <Button
               text="Resume"
               href="/src/components/Resume.html"
-
             />
+
+            <a href="/src/components/Resume.html" className="px-5 py-2 font-bold text-white transition-all duration-200 text-xl underline" download={true} >
+                Download
+            </a>
           </div>
           {/* <h1 ref={webRef} className="text-4xl lg:text-[12rem]  absolute bottom-48 font-bold z-10">WEB DEV</h1> */}
         </div>
