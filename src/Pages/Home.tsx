@@ -50,7 +50,7 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
           <div ref={buttonRef} className="flex justify-center items-center gap-3 flex-col lg:flex-row">
             <Button
               text="Resume"
-              href="/src/components/Resume.html"
+              href="../../Resume.html"
             />
 
             <a href="/src/components/Resume.html" className="px-5 py-2 font-bold text-white transition-all duration-200 text-xl underline" download={true} >
