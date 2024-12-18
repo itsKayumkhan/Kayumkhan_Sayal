@@ -17,6 +17,7 @@ import { isMobile } from "../Constants";
 import { navAnimation, textAnimation } from "./animation/animation";
 import WebsiteTour from "./components/WebsiteTour";
 import Marque from "./components/Marque";
+import CanvasCursor from "./components/curser";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -107,10 +108,11 @@ console.log(isMobile)
   return (
     <>
       <Toaster />
-      <div
+      {/* <div
         ref={mouseRef}
         className="cursor w-6 h-6 rounded-full bg-slate-200 fixed"
-      ></div>
+      ></div> */}
+      <CanvasCursor/>
       <div className="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]" />
 
       <NavBar logoRef={logoRef} iconRef={iconRef} />

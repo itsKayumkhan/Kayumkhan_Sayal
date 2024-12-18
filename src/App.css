@@ -651,3 +651,22 @@ svg:hover {
   padding: 4px 9px;
   border-radius: 50%;
 }
+
+
+
+
+/* //cursor */
+
+.banner button {
+    background-image: linear-gradient(to bottom, #eee1, transparent, #eee1);
+  }
+
+ .banner h1.left {
+    --to: left;
+    background-image: linear-gradient(to var(--to), #89a5df, #e46e7f, #e8e191);
+  }
+
+  .banner  h1.right {
+    --to: right;
+    background-image: linear-gradient(to var(--to), #89a5df, #e46e7f, #e8e191);
+  }
