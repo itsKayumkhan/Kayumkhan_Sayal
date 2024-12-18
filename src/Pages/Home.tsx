@@ -1,9 +1,8 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-import gLogo from "../../gLogo.svg";
-import Button from "../components/Button";
-import SideNav from "../components/SideNav";
 import { Link } from "react-router-dom";
+import gLogo from "../../gLogo.svg";
+import SideNav from "../components/SideNav";
 
 interface HomeProps {
   buttonRef: React.RefObject<HTMLDivElement>;
