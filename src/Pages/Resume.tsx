@@ -9,6 +9,7 @@ const Resume = () => {
   {/* Header */}  <a href="../../Resume.html" className="fixed top-10 right-3 px-5 py-2 font-bold text-white transition-all duration-200 text-xl underline" download="Kayum_Khan_Sayal_Resume">
     Download
   </a>
+  
   <div className="text-center mb-8">
     <h1 className="text-3xl font-bold ">Kayum Khan Sayal</h1>
     <p className="text-lg text-blue-600">

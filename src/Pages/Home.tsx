@@ -12,7 +12,7 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
   const logoRef = useRef<HTMLImageElement>(null);
-//   const webRef = useRef<HTMLImageElement>(null);
+  //   const webRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     gsap.from(".logoImg", {
@@ -47,10 +47,28 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
           <h2 className="text-2xl mt-4" ref={desRef}>
             Full Stack Developer
           </h2>
-          <div ref={buttonRef} className="flex justify-center items-center gap-3 flex-col lg:flex-row">
-            <Link to="/resume-me">Resume</Link>
-            <a href="../../Resume.html" className="px-5 py-2 font-bold text-white transition-all duration-200 text-xl underline" download="Kayum_Khan_Sayal_Resume" >
-                Download
+          <div
+            ref={buttonRef}
+            className="flex justify-center items-center gap-3 flex-col lg:flex-row"
+          >
+            <Link
+              to="/resume-me"
+              className="relative mt-4 inline-flex items-center justify-start   px-7 py-3 overflow-hidden font-bold rounded-full group"
+            >
+              <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]" />
+              <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8" />
+              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
+                Resume
+              </span>
+              <span className="absolute inset-0 border-2 border-white rounded-full" />
+            </Link>
+
+            <a
+              href="../../Resume.html"
+              className="px-5 py-2 font-bold text-white transition-all duration-200 text-xl underline"
+              download="Kayum_Khan_Sayal_Resume"
+            >
+              Download
             </a>
           </div>
           {/* <h1 ref={webRef} className="text-4xl lg:text-[12rem]  absolute bottom-48 font-bold z-10">WEB DEV</h1> */}
