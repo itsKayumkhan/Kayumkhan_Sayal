@@ -64,7 +64,7 @@ const About = () => {
             solid foundation for my work.
           </p>
 
-          <div className="relative lg:px-24 info text-xl  text-left px-2 lg:mt-24 mt-10 lg:blur-md lg:opacity-0">
+          {/* <div className="relative lg:px-24 info text-xl  text-left px-2 lg:mt-24 mt-10 lg:blur-md lg:opacity-0">
             <h1 className="text-2xl uppercase text-bold mt-10">Channel</h1>{" "}
             <p className="info text-xl text-left  lg:blur-md lg:opacity-0 ">
               I run the YouTube channel to help students solve daily life
@@ -86,7 +86,7 @@ const About = () => {
                 Kayumkhansayal
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </ContainerWrapper>

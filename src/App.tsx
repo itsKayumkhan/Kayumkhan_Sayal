@@ -29,23 +29,23 @@ function App() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [scrollBtn, setScrollBtn] = useState(false);
 
-  console.log(window.innerWidth);
-console.log(isMobile)
   useLayoutEffect(() => {
-   if(!isMobile) {const t1 = gsap.timeline();
-    if (
-      logoRef.current &&
-      iconRef.current &&
-      headingRef.current &&
-      desRef.current &&
-      buttonRef.current
-    ) {
-      t1.from(logoRef.current, navAnimation)
-        .from(iconRef.current, navAnimation)
-        .from(headingRef.current, textAnimation)
-        .from(desRef.current, textAnimation)
-        .from(buttonRef.current, textAnimation);
-    }}
+    if (!isMobile) {
+      const t1 = gsap.timeline();
+      if (
+        logoRef.current &&
+        iconRef.current &&
+        headingRef.current &&
+        desRef.current &&
+        buttonRef.current
+      ) {
+        t1.from(logoRef.current, navAnimation)
+          .from(iconRef.current, navAnimation)
+          .from(headingRef.current, textAnimation)
+          .from(desRef.current, textAnimation)
+          .from(buttonRef.current, textAnimation);
+      }
+    }
   }, []);
   useLayoutEffect(() => {
     if (!isMobile) {
@@ -102,10 +102,17 @@ console.log(isMobile)
     };
   }, []);
 
-  const imgArray:string[] = ['https://res.cloudinary.com/dslgstzex/image/upload/v1732703286/pic1_pwyp0w.png','https://res.cloudinary.com/dslgstzex/image/upload/v1732703297/pic2_nkjtoi.png','https://res.cloudinary.com/dslgstzex/image/upload/v1732703288/pic3_qusi1o.png ']
+  const imgArray: string[] = [
+    "https://res.cloudinary.com/dslgstzex/image/upload/v1732703286/pic1_pwyp0w.png",
+    "https://res.cloudinary.com/dslgstzex/image/upload/v1732703297/pic2_nkjtoi.png",
+    "https://res.cloudinary.com/dslgstzex/image/upload/v1732703288/pic3_qusi1o.png ",
+    "https://res.cloudinary.com/dslgstzex/image/upload/v1734545321/Screenshot_2024-12-18_233829_fyxpiu.png"
+  ];
 
   return (
     <>
+
+
       <Toaster />
       <div
         ref={mouseRef}
@@ -116,13 +123,13 @@ console.log(isMobile)
       <NavBar logoRef={logoRef} iconRef={iconRef} />
       <Home buttonRef={buttonRef} headingRef={headingRef} desRef={desRef} />
       <About />
-     { !isMobile && <Marque/>}
+      {!isMobile && <Marque />}
 
       <Skills />
       <ProjectCard />
-      <Marque/>
+      <Marque />
       <Service />
-      <WebsiteTour imgArray={imgArray} title="Website Tour"/>
+      <WebsiteTour imgArray={imgArray} title="Website Tour" />
       <Contact />
       <Footer />
       {scrollBtn && (

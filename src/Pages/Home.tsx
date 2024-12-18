@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import gLogo from "../../gLogo.svg";
 import Button from "../components/Button";
 import SideNav from "../components/SideNav";
+import { Link } from "react-router-dom";
 
 interface HomeProps {
   buttonRef: React.RefObject<HTMLDivElement>;
@@ -48,12 +49,8 @@ const Home: React.FC<HomeProps> = ({ buttonRef, headingRef, desRef }) => {
             Full Stack Developer
           </h2>
           <div ref={buttonRef} className="flex justify-center items-center gap-3 flex-col lg:flex-row">
-            <Button
-              text="Resume"
-              href="../../Resume.html"
-            />
-
-            <a href="/src/components/Resume.html" className="px-5 py-2 font-bold text-white transition-all duration-200 text-xl underline" download={true} >
+            <Link to="/resume-me">Resume</Link>
+            <a href="../../Resume.html" className="px-5 py-2 font-bold text-white transition-all duration-200 text-xl underline" download="Kayum_Khan_Sayal_Resume" >
                 Download
             </a>
           </div>
